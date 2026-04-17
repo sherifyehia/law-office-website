@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --firm-navy: #102539;
+  --firm-gold: #f8b648;
+  --firm-ink: #243546;
+  --firm-muted: #5f728f;
+  --firm-bg: #eef3f8;
+  --firm-white: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--firm-bg);
+  color: var(--firm-ink);
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.6;
+}
+
+button,
+input,
+textarea,
+select,
+a {
+  font: inherit;
+}

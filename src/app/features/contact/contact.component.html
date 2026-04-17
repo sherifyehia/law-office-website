@@ -1,0 +1,127 @@
+<section class="contact-page">
+  <div class="contact-hero">
+    <div class="contact-hero__content">
+      <p class="eyebrow">Talk to our legal team</p>
+      <h1>Fast, trusted support for your case</h1>
+      <p>
+        Send your request directly to our inbox with one click. The form below creates a
+        Gmail draft so your message arrives in the right place immediately.
+      </p>
+    </div>
+    <div class="contact-hero__panel">
+      <div class="hero-card">
+        <p class="hero-card__label">Office hours</p>
+        <strong>Mon – Fri</strong>
+        <span>09:00 AM – 06:00 PM</span>
+      </div>
+      <div class="hero-card">
+        <p class="hero-card__label">Priority inbox</p>
+        <strong>contact@lawoffice.com</strong>
+        <span>Gmail-ready message flow</span>
+      </div>
+      <div class="hero-card hero-card--accent">
+        <p class="hero-card__label">Response time</p>
+        <strong>Within 24 hours</strong>
+        <span>Legal intake specialists review every inquiry</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-details">
+      <div class="detail-block">
+        <h2>Contact details</h2>
+        <p>Request expert legal guidance and we’ll route your case to the right attorney.</p>
+      </div>
+
+      <div class="detail-list">
+        <div>
+          <span>Email</span>
+          <strong>contact@lawoffice.com</strong>
+        </div>
+        <div>
+          <span>Phone</span>
+          <strong>+1 (555) 832-9947</strong>
+        </div>
+        <div>
+          <span>Location</span>
+          <strong>Downtown legal district, Main Street</strong>
+        </div>
+      </div>
+
+      <div class="detail-block detail-block--accent">
+        <h3>Open in Google Inbox</h3>
+        <p>
+          Fill the form and click the button to launch Gmail with your message prefilled.
+          This ensures your inquiry goes straight to our inbox.
+        </p>
+      </div>
+    </div>
+
+    <div class="contact-form-shell">
+      <form class="contact-form" novalidate>
+        <div class="field-group">
+          <label for="name">Full name</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Your full name"
+            [value]="name()"
+            (input)="name.set($any($event.target).value)"
+          />
+        </div>
+
+        <div class="field-group">
+          <label for="email">Email address</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="you@example.com"
+            [value]="email()"
+            (input)="email.set($any($event.target).value)"
+          />
+        </div>
+
+        <div class="field-group">
+          <label for="subject">Subject</label>
+          <input
+            id="subject"
+            type="text"
+            placeholder="Case inquiry or service request"
+            [value]="subject()"
+            (input)="subject.set($any($event.target).value)"
+          />
+        </div>
+
+        <div class="field-group field-group--full">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            rows="6"
+            placeholder="Describe your legal matter or question"
+            [value]="message()"
+            (input)="message.set($any($event.target).value)"
+          ></textarea>
+        </div>
+
+        <div class="contact-actions">
+          <a
+            [href]="gmailUrl()"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button--primary"
+          >
+            Open in Gmail
+          </a>
+          <a
+            [href]="mailtoUrl()"
+            class="button button--secondary"
+          >
+            Send with email app
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+

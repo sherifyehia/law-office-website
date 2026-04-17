@@ -1,0 +1,359 @@
+.about-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(3rem, 6vw, 6rem) 1.5rem;
+  background: linear-gradient(180deg, #0f324f 0%, #102539 100%);
+  color: var(--firm-white);
+  text-align: center;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(248, 182, 72, 0.18), transparent 20%),
+    radial-gradient(circle at 90% 12%, rgba(248, 182, 72, 0.08), transparent 18%);
+  pointer-events: none;
+}
+
+.about-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-hero h1 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1.05;
+  margin: 1rem 0 1.5rem;
+}
+
+.intro-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(245, 248, 251, 0.88);
+}
+
+/* Mission Section */
+.our-mission {
+  padding: clamp(3rem, 4vw, 5rem) 1.5rem;
+  background: var(--firm-white);
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mission-card {
+  padding: 2.5rem 2rem;
+  border-radius: 1.25rem;
+  background: linear-gradient(135deg, #f8f9fb 0%, #eef3f8 100%);
+  border: 1px solid #d9e2ea;
+}
+
+.mission-card h2 {
+  color: var(--firm-navy);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.mission-card p {
+  line-height: 1.7;
+  color: var(--firm-muted);
+}
+
+/* Values Section */
+.values-section {
+  padding: clamp(3rem, 4vw, 5rem) 1.5rem;
+  background: #f8fafc;
+}
+
+.section-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--firm-navy);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.section-intro h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.value-card {
+  padding: 2rem;
+  border-radius: 1.25rem;
+  background: var(--firm-white);
+  border: 1px solid #e4eaf2;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(16, 37, 57, 0.12);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.value-card h3 {
+  color: var(--firm-navy);
+  font-size: 1.25rem;
+  margin: 0 0 0.75rem;
+}
+
+.value-card p {
+  color: var(--firm-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Achievements Section */
+.achievements {
+  padding: clamp(3rem, 4vw, 5rem) 1.5rem;
+  background: var(--firm-white);
+}
+
+.achievements-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.achievements-intro h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  padding: 2.5rem 1.5rem;
+  border-radius: 1.25rem;
+  border: 2px solid var(--firm-gold);
+  background: linear-gradient(135deg, rgba(248, 182, 72, 0.05) 0%, rgba(248, 182, 72, 0.02) 100%);
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--firm-gold);
+  margin: 0 0 0.5rem;
+}
+
+.stat-label {
+  color: var(--firm-navy);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: clamp(3rem, 4vw, 5rem) 1.5rem;
+  background: #f8fafc;
+}
+
+.why-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.why-intro h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-item {
+  padding: 2rem;
+  border-radius: 1rem;
+  background: var(--firm-white);
+  border-left: 4px solid var(--firm-gold);
+}
+
+.why-item h3 {
+  color: var(--firm-navy);
+  margin: 0 0 1rem;
+}
+
+.why-item p {
+  color: var(--firm-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Firm Strength Section */
+.firm-strength {
+  padding: clamp(3rem, 4vw, 5rem) 1.5rem;
+  background: var(--firm-white);
+}
+
+.strength-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.strength-content h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--firm-navy);
+}
+
+.strength-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--firm-ink);
+  margin-bottom: 1.5rem;
+}
+
+.strength-content .button {
+  display: inline-flex;
+  margin-top: 1rem;
+}
+
+/* Final CTA Section */
+.cta-final {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 3vw, 4rem) 1.5rem;
+  background: var(--firm-navy);
+  color: var(--firm-white);
+  border-radius: 1.25rem;
+}
+
+.cta-final h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.1;
+}
+
+.cta-final .eyebrow {
+  color: var(--firm-gold);
+}
+
+.cta-final p {
+  margin: 0.75rem 0 0;
+  font-size: 1rem;
+  color: rgba(245, 248, 251, 0.88);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0 1.6rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.button--primary {
+  background-color: var(--firm-gold);
+  color: var(--firm-navy);
+  box-shadow: 0 18px 35px rgba(16, 37, 57, 0.16);
+}
+
+@media (max-width: 860px) {
+  .mission-grid,
+  .values-grid,
+  .stats-grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-final {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .cta-final > a {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero,
+  .our-mission,
+  .values-section,
+  .achievements,
+  .why-choose-us,
+  .firm-strength,
+  .cta-final {
+    padding: 2rem 1rem;
+  }
+
+  .value-card,
+  .mission-card,
+  .why-item {
+    padding: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,38 @@
+<section class="articles-page">
+  <div class="page-header">
+    <p class="eyebrow">Legal insights</p>
+    <h1>Articles that explain your legal options clearly</h1>
+    <p>Stay informed with the latest guidance, case updates, and practical advice from our law office.</p>
+  </div>
+
+  <div *ngIf="articles$ | async as articles; else loading">
+    <div class="articles-grid">
+      <article *ngFor="let article of articles" class="article-card">
+        <div *ngIf="article.featuredImage" class="article-image">
+          <img [src]="article.featuredImage" [alt]="article.title" />
+        </div>
+
+        <div class="article-card__content">
+          <p class="article-label">Legal insight</p>
+          <h2>{{ article.title }}</h2>
+          <p class="article-summary">{{ article.summary }}</p>
+
+          <div *ngIf="article.content && isExpanded(article.id)" class="article-full-content">
+            <p [innerHTML]="article.content"></p>
+          </div>
+
+          <div class="article-footer">
+            <button *ngIf="article.content" type="button" class="read-more-btn" (click)="toggleReadMore(article.id)">
+              {{ isExpanded(article.id) ? 'Read less' : 'Read more' }}
+            </button>
+            <span class="article-meta">Published {{ article.publishedAt | date:'longDate' }}</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <p class="loading-text">Loading articles…</p>
+  </ng-template>
+</section>

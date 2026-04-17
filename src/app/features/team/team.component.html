@@ -1,0 +1,113 @@
+<section class="team-page">
+  <div class="team-hero">
+    <div class="team-hero__content">
+      <p class="eyebrow">Our legal team</p>
+      <h1>Meet the attorneys who protect your future</h1>
+      <p>Our lawyers combine powerful courtroom experience with empathetic client service. Every case receives a thoughtful, strategic response designed for real-world outcomes.</p>
+    </div>
+    <div class="team-hero__stats">
+      <div>
+        <strong>10+</strong>
+        <span>Years of experience</span>
+      </div>
+      <div>
+        <strong>500+</strong>
+        <span>Cases resolved</span>
+      </div>
+      <div>
+        <strong>95%</strong>
+        <span>Client satisfaction</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="team-values">
+    <div class="values-card">
+      <h2>Trusted advocacy</h2>
+      <p>We fight for your rights with clarity and commitment, and we make sure you understand every step of the process.</p>
+    </div>
+    <div class="values-card">
+      <h2>Personalized counsel</h2>
+      <p>Each client receives a tailored legal plan that reflects their goals, deadlines, and risk tolerance.</p>
+    </div>
+    <div class="values-card">
+      <h2>Deep expertise</h2>
+      <p>We bring industry knowledge across business law, family law, and personal injury to every matter we handle.</p>
+    </div>
+  </section>
+
+  <section class="team-members" aria-labelledby="team-heading">
+    <div class="section-headline">
+      <p class="eyebrow">Our specialists</p>
+      <h2 id="team-heading">Your dedicated legal partners</h2>
+    </div>
+
+    <div class="team-members__grid">
+      <article *ngFor="let member of teamMembers" class="member-card">
+        <div class="member-card__topbar">
+          <span class="member-badge">{{ member.role }}</span>
+          <span class="member-tag">Client-first counsel</span>
+        </div>
+
+        <div class="member-card__media" *ngIf="member.photo">
+          <img [src]="member.photo" [alt]="member.name" />
+          <div class="member-card__overlay">
+            <p>Strategic guidance, every step</p>
+          </div>
+        </div>
+
+        <div class="member-card__body">
+          <p class="member-name">{{ member.name }}</p>
+          <p class="member-title">{{ member.role }}</p>
+          <p class="member-bio">{{ member.bio }}</p>
+
+          <div class="member-card__info">
+            <div>
+              <strong>15+</strong>
+              <span>Years practice</span>
+            </div>
+            <div>
+              <strong>300+</strong>
+              <span>Successful cases</span>
+            </div>
+          </div>
+
+          <div class="member-actions">
+            <button type="button" (click)="openModal(member)">View profile</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="member-modal" [class.open]="isModalOpen()">
+    <div class="modal-backdrop" (click)="closeModal()"></div>
+    <div class="modal-shell">
+      <button type="button" class="modal-close" (click)="closeModal()">×</button>
+      <div *ngIf="selectedMember() as member" class="member-modal__content">
+        <div class="member-modal__hero">
+          <div class="member-modal__image" *ngIf="member.photo">
+            <img [src]="member.photo" [alt]="member.name" />
+          </div>
+          <div class="member-modal__text">
+            <p class="eyebrow">Team profile</p>
+            <h2>{{ member.name }}</h2>
+            <p class="member-role">{{ member.role }}</p>
+            <p class="member-modal__summary">{{ member.bio }}</p>
+          </div>
+        </div>
+
+        <div class="member-modal__details">
+          <div class="detail-block">
+            <h3>Client-first approach</h3>
+            <p>Each case is handled with care and transparency so you always know the next step.</p>
+          </div>
+          <div class="detail-block">
+            <h3>Focused expertise</h3>
+            <p>We bring legal knowledge, strong negotiation skills, and a commitment to protecting your interests.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
